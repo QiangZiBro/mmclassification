@@ -11,7 +11,7 @@ ENV CMAKE_PREFIX_PATH="(dirname(which conda))/../"
 RUN apt-get update && apt-get install -y ffmpeg libsm6 libxext6 git ninja-build libglib2.0-0 libsm6 libxrender-dev libxext6 openssh-server openssh-client\
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
-	&& echo root:hancb|chpasswd   \
+	&& echo root:1234|chpasswd   \
 	&& echo "PermitRootLogin yes" >> /etc/ssh/sshd_config \
 	&& sed -i 's/PermitRootLogin prohibit-password/# PermitRootLogin prohibit-password/' /etc/ssh/sshd_config \
 	&& /etc/init.d/ssh start
