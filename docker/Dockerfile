@@ -17,6 +17,7 @@ RUN pip install mmcv-full==1.3.8 -f https://download.openmmlab.com/mmcv/dist/cu1
 
 # Install MMClassification
 RUN conda clean --all
-RUN git clone https://github.com/open-mmlab/mmclassification.git
+RUN git clone https://github.com/QiangZiBro/mmclassification.git
 WORKDIR ./mmclassification
 RUN pip install --no-cache-dir -e .
+WORKDIR /workspace
