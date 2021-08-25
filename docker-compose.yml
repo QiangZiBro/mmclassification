@@ -8,10 +8,9 @@ services:
     volumes:
         - .:/workspace
     tty: true
-    network_mode: "host"
-    environment:
-      - "http_proxy=${http_proxy}"
-      - "https_proxy=${https_proxy}"
+    ports:
+        - "11000:11000"
+        - "220:22"
     deploy:
       resources:
         reservations:
